@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+$(document).ready(function(){
+    $(window).scroll(function(){
+        
+        $("p").each(function(){
+        	if(isScrolledIntoView($(this))){
+            	$(this).css({"background": "green"});
+            }
+        });
+    });
+});
+</script>
+</head>
+<body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p>If you click on me, I will xxx dsdfdisappear.</p>
+<p>Click me away!</p>
+<p>Scrolled to me already!</p>
+<p id="xxxx">Scrolled to me already!</p>
+
+<p>Scrolled to me already!</p>
+<p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p><p>Scrolled to me already!</p>
+<p>Scrolled to me already!</p>
+<p id="xxxx">Scrolled to me already!</p>
+
+
+</body>
+</html>
